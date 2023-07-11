@@ -1,6 +1,7 @@
 import random 
 import re
 from pwinput import pwinput
+spasi = ("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 class Mobil ():
     def __init__(Self,no_mobil,brand_mobil,model_mobil,warna_mobil,jenis_mobil,tahun_keluar,plat_nomor,sewa_mobil,harga_mobil,transmisi_mobil) :
         Self.no_mobil = no_mobil
@@ -14,6 +15,7 @@ class Mobil ():
         Self.harga_mobil = harga_mobil
         Self.transmisi_mobil = transmisi_mobil
 
+         
 class Booking ():
     booking_count = 0
     def __init__(Self,booking_nama,booking_no_hp,booking_waktu,booking_harga,booking_bayar,booking_mobil_brand,booking_model_mobil,booking_mobil_index) :
@@ -597,6 +599,7 @@ class Login:
                                 print ("Mobil Yang Di Pesan : ", List_Mobil[booking_index-1].brand_mobil)
                                 print ("Dengan Model        : ",List_Mobil[booking_index-1].model_mobil)
                                 print ("Dengan Jenis        : ",List_Mobil[booking_index-1].jenis_mobil)
+                                print ("Dengan Harga        :  Rp.",List_Mobil[booking_index-1].harga_mobil)
                                 print ("Dengan Warna        : ",List_Mobil[booking_index-1].warna_mobil)
                                 print ("Dengan Plat no      : ",List_Mobil[booking_index-1].plat_nomor)
                                 print ("=============================================================")
@@ -656,7 +659,7 @@ class Login:
                             print("Mobil Yang Di Booking : ", booking.booking_mobil_brand,booking.booking_model_mobil)
                             print("Dengan No Hp: ", booking.booking_no_hp)
                             print("Dengan Lama Peminjaman: ", booking.booking_waktu)
-                            print("Dengan Tagihan Sebesar: ", booking.booking_bayar)
+                            print("Dengan Tagihan Sebesar: Rp.", booking.booking_bayar)
                             print ("=============================================================")
                             menu = 0
                         booking_id = input("Booking Mana Yang Ingin Di Batalkan : ")
